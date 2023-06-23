@@ -1,21 +1,18 @@
 #pragma once
 
-#include <Arduino.h>
-class LED {
-private:
-    int pin;
-public:
-    LED(int pin) : pin(pin) {
-        pinMode(pin, OUTPUT);
-        off();
-    }
-    void on() {
-        digitalWrite(pin, HIGH);
-    }
-    void off() {
-        digitalWrite(pin, LOW);
-    }
-    void toggle() {
-        digitalWrite(pin, !digitalRead(pin));
-    }
+#include "component.h"
+
+class LEDComponent : public AppComponent {
+ private:
+  int pin;
+
+ public:
+  LEDComponent();
+  void on();
+  void off();
+  void toggle();
+
+  const char* name() override { return "LED"; }
+
+  void loop() override;
 };
