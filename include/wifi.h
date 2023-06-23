@@ -1,5 +1,8 @@
+#pragma once
+
 #include <Ticker.h>
-#include "common.h"
+#include <WiFi.h>
+#include "component.h"
 
 class WiFiComponent : public AppComponent {
  private:
@@ -10,5 +13,6 @@ class WiFiComponent : public AppComponent {
 
  public:
   WiFiComponent();
+  bool isWiFiConnected() { return WiFi.status() == WL_CONNECTED; }
   const char* name() override { return "WiFiComponent"; }
 };

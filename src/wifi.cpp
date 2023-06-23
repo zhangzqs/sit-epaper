@@ -1,4 +1,3 @@
-#include <WiFi.h>
 #include "common.h"
 WiFiComponent::WiFiComponent() {
   log_debug("WiFiComponent::setup");

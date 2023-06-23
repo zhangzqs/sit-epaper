@@ -26,6 +26,9 @@ void setup() {
   std::unique_ptr<WiFiComponent> m_wifi(new WiFiComponent());
   Global::wifi = std::move(m_wifi);
 
+  std::unique_ptr<MqttComponent> m_mqtt(new MqttComponent());
+  Global::mqtt = std::move(m_mqtt);
+
   log_info("初始化完成");
 }
 
@@ -37,4 +40,5 @@ void loop() {
   Global::epaper->loop();
   Global::led->loop();
   Global::wifi->loop();
+  Global::mqtt->loop();
 }

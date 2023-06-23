@@ -7,9 +7,6 @@ EPaperComponent::EPaperComponent() {
                  GENERATED::PIN::EPD::RST, GENERATED::PIN::EPD::BUSY));
   this->epaper = std::move(m_p);
   log_info("初始化电子墨水屏完成");
-
-  epaper->showTest();
-  log_info("显示测试完成");
 }
 
 void EPaperComponent::loop() {}

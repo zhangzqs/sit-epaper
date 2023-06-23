@@ -12,6 +12,9 @@ class EPaperComponent : public AppComponent {
   EPaperComponent();
   const char* name() override { return "EPaperComponent"; }
 
+  void showFrameBuffer(FrameBuffer& frameBuffer) {
+    epaper->showFrameBuffer(frameBuffer);
+  }
   void showTest() { epaper->showTest(); }
   void loop() override;
 };

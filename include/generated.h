@@ -6,8 +6,10 @@ extern const char* SSID;
 extern const char* PASSWORD;
 }  // namespace WIFI
 namespace MQTT {
-extern const char* SERVER;
+extern const char* HOST;
+extern const int PORT;
 extern const char* CLIENT_ID;
+extern const char* NAMESPACE;
 extern const char* USERNAME;
 extern const char* PASSWORD;
 }  // namespace MQTT

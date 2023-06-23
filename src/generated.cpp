@@ -6,8 +6,10 @@ const char* SSID = "PDCN";
 const char* PASSWORD = "18521077169";
 }  // namespace WIFI
 namespace MQTT {
-const char* SERVER = "192.168.31.1";
-const char* CLIENT_ID = "ESP8266";
+const char* HOST = "broker.emqx.io";
+const int PORT = 1883;
+const char* NAMESPACE = "esp32-epaper/";
+const char* CLIENT_ID = "MY_ESP32_EPAPER";
 const char* USERNAME = "admin";
 const char* PASSWORD = "public";
 }  // namespace MQTT

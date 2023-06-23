@@ -48,53 +48,70 @@ Button1Component::Button1Component()
 
 void Button1Component::onClick() {
   log_info("按钮1被点击");
-  Global::epaper->showTest();
+  Global::mqtt->publishButtonEvent(BUTTON_ID_1, BUTTON_EVENT_ID_CLICK);
 }
 
 void Button1Component::onDoubleClick() {
   log_info("按钮1被双击");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_1, BUTTON_EVENT_ID_DOUBLE_CLICK);
 }
 
 void Button1Component::onLongPressStart() {
   log_info("按钮1长按开始");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_1,
+                                   BUTTON_EVENT_ID_LONG_PRESS_START);
 }
 
 void Button1Component::onLongPressStop() {
   log_info("按钮1长按结束");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_1,
+                                   BUTTON_EVENT_ID_LONG_PRESS_STOP);
 }
 Button2Component::Button2Component()
     : BaseButtonComponent(GENERATED::PIN::BUTTON::BUTTON_2) {}
 
 void Button2Component::onClick() {
   log_info("按钮2被点击");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_2, BUTTON_EVENT_ID_CLICK);
 }
 
 void Button2Component::onDoubleClick() {
   log_info("按钮2被双击");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_2, BUTTON_EVENT_ID_DOUBLE_CLICK);
 }
 
 void Button2Component::onLongPressStart() {
   log_info("按钮2长按开始");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_2,
+                                   BUTTON_EVENT_ID_LONG_PRESS_START);
 }
 
 void Button2Component::onLongPressStop() {
   log_info("按钮2长按结束");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_2,
+                                   BUTTON_EVENT_ID_LONG_PRESS_STOP);
 }
 Button3Component::Button3Component()
     : BaseButtonComponent(GENERATED::PIN::BUTTON::BUTTON_3) {}
 
 void Button3Component::onClick() {
   log_info("按钮3被点击");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_3, BUTTON_EVENT_ID_CLICK);
 }
 
 void Button3Component::onDoubleClick() {
   log_info("按钮3被双击");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_3, BUTTON_EVENT_ID_DOUBLE_CLICK);
 }
 
 void Button3Component::onLongPressStart() {
   log_info("按钮3长按开始");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_3,
+                                   BUTTON_EVENT_ID_LONG_PRESS_START);
 }
 
 void Button3Component::onLongPressStop() {
   log_info("按钮3长按结束");
+  Global::mqtt->publishButtonEvent(BUTTON_ID_3,
+                                   BUTTON_EVENT_ID_LONG_PRESS_STOP);
 }
