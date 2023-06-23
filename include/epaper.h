@@ -12,5 +12,6 @@ class EPaperComponent : public AppComponent {
   EPaperComponent();
   const char* name() override { return "EPaperComponent"; }
 
+  void showTest() { epaper->showTest(); }
   void loop() override;
 };

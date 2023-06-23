@@ -48,6 +48,7 @@ Button1Component::Button1Component()
 
 void Button1Component::onClick() {
   log_info("按钮1被点击");
+  Global::epaper->showTest();
 }
 
 void Button1Component::onDoubleClick() {
